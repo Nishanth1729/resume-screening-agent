@@ -1,0 +1,8 @@
+Aisha Khan
+AI Research Engineer
+
+Education
+Master of Science in Computer Science, National Institute of Technology
+
+Experience
+3 years of experience building machine learning and NLP applications. Built RAG prototypes with LLMs, Python, pandas, scikit-learn, FastAPI, Docker, SQL, Git, and AWS. Evaluated retrieval quality and presented experiment results to product teams.

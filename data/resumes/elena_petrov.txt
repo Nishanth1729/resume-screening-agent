@@ -1,0 +1,8 @@
+Elena Petrov
+Applied Scientist
+
+Education
+PhD in Natural Language Processing
+
+Experience
+6 years of experience in machine learning, deep learning, NLP, Python, PyTorch, TensorFlow, LLM, RAG, SQL, pandas, scikit-learn, Docker, Git, GCP, and data analysis. Published model evaluation research and built production language systems.

@@ -1,0 +1,7 @@
+Junior AI Research Associate
+
+Rooman Technologies is seeking a Junior AI Research Associate to build, evaluate, and document practical AI solutions. Candidates should have 2+ years of experience with Python, machine learning, NLP, data analysis, SQL, and Git. Experience with LLMs, RAG, scikit-learn, pandas, FastAPI, cloud platforms, and Docker is desirable.
+
+Education: Bachelor's degree or higher in Computer Science, Data Science, AI, or a related field.
+
+Responsibilities include preparing datasets, evaluating models, building small AI services, communicating findings, and collaborating with engineering teams.

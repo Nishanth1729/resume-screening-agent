@@ -1,0 +1,8 @@
+Isabella Rossi
+Research Intern
+
+Education
+Bachelor of Science in Artificial Intelligence
+
+Experience
+2 years of experience through internships and projects using Python, machine learning, NLP, LLM, pandas, scikit-learn, Git, and data analysis. Implemented text summarization experiments and documented results.

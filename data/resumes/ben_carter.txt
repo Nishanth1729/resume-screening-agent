@@ -1,0 +1,8 @@
+Ben Carter
+Data Analyst
+
+Education
+Bachelor of Science in Statistics
+
+Experience
+4 years of experience in data analysis using SQL, Python, pandas, Excel, Tableau, Power BI, and Git. Developed dashboards, cleaned sales data, and explained trends to stakeholders.

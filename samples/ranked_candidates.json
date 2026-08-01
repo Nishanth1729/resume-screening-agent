@@ -1,0 +1,282 @@
+[
+  {
+    "filename": "aisha_khan.txt",
+    "name": "Aisha Khan",
+    "similarity_score": 14.9,
+    "skills_score": 91.7,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "overall_score": 58.8,
+    "matched_skills": [
+      "docker",
+      "fastapi",
+      "git",
+      "llm",
+      "machine learning",
+      "nlp",
+      "pandas",
+      "python",
+      "rag",
+      "scikit-learn",
+      "sql"
+    ],
+    "missing_skills": [
+      "data analysis"
+    ],
+    "years_experience": 3.0,
+    "education": "Master's",
+    "reasoning": "Matched skills: docker, fastapi, git, llm, machine learning, nlp, pandas, python, rag, scikit-learn, sql; Missing JD skills: data analysis; Detected experience: 3 years."
+  },
+  {
+    "filename": "elena_petrov.txt",
+    "name": "Elena Petrov",
+    "similarity_score": 6.4,
+    "skills_score": 91.7,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "overall_score": 54.9,
+    "matched_skills": [
+      "data analysis",
+      "docker",
+      "git",
+      "llm",
+      "machine learning",
+      "nlp",
+      "pandas",
+      "python",
+      "rag",
+      "scikit-learn",
+      "sql"
+    ],
+    "missing_skills": [
+      "fastapi"
+    ],
+    "years_experience": 6.0,
+    "education": "PhD",
+    "reasoning": "Matched skills: data analysis, docker, git, llm, machine learning, nlp, pandas, python, rag, scikit-learn, sql; Missing JD skills: fastapi; Detected experience: 6 years."
+  },
+  {
+    "filename": "charu_iyer.txt",
+    "name": "Charu Iyer",
+    "similarity_score": 13.5,
+    "skills_score": 75.0,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "overall_score": 52.3,
+    "matched_skills": [
+      "docker",
+      "fastapi",
+      "git",
+      "machine learning",
+      "nlp",
+      "pandas",
+      "python",
+      "scikit-learn",
+      "sql"
+    ],
+    "missing_skills": [
+      "data analysis",
+      "llm",
+      "rag"
+    ],
+    "years_experience": 2.0,
+    "education": "Bachelor's",
+    "reasoning": "Matched skills: docker, fastapi, git, machine learning, nlp, pandas, python, scikit-learn, sql; Missing JD skills: data analysis, llm, rag; Detected experience: 2 years."
+  },
+  {
+    "filename": "isabella_rossi.txt",
+    "name": "Isabella Rossi",
+    "similarity_score": 7.3,
+    "skills_score": 66.7,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "overall_score": 46.6,
+    "matched_skills": [
+      "data analysis",
+      "git",
+      "llm",
+      "machine learning",
+      "nlp",
+      "pandas",
+      "python",
+      "scikit-learn"
+    ],
+    "missing_skills": [
+      "docker",
+      "fastapi",
+      "rag",
+      "sql"
+    ],
+    "years_experience": 2.0,
+    "education": "Bachelor's",
+    "reasoning": "Matched skills: data analysis, git, llm, machine learning, nlp, pandas, python, scikit-learn; Missing JD skills: docker, fastapi, rag, sql; Detected experience: 2 years."
+  },
+  {
+    "filename": "ben_carter.txt",
+    "name": "Ben Carter",
+    "similarity_score": 8.3,
+    "skills_score": 41.7,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "overall_score": 38.3,
+    "matched_skills": [
+      "data analysis",
+      "git",
+      "pandas",
+      "python",
+      "sql"
+    ],
+    "missing_skills": [
+      "docker",
+      "fastapi",
+      "llm",
+      "machine learning",
+      "nlp",
+      "rag",
+      "scikit-learn"
+    ],
+    "years_experience": 4.0,
+    "education": "Bachelor's",
+    "reasoning": "Matched skills: data analysis, git, pandas, python, sql; Missing JD skills: docker, fastapi, llm, machine learning, nlp, rag, scikit-learn; Detected experience: 4 years."
+  },
+  {
+    "filename": "harish_nair.txt",
+    "name": "Harish Nair",
+    "similarity_score": 7.1,
+    "skills_score": 41.7,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "overall_score": 37.8,
+    "matched_skills": [
+      "data analysis",
+      "docker",
+      "git",
+      "python",
+      "sql"
+    ],
+    "missing_skills": [
+      "fastapi",
+      "llm",
+      "machine learning",
+      "nlp",
+      "pandas",
+      "rag",
+      "scikit-learn"
+    ],
+    "years_experience": 4.0,
+    "education": "Bachelor's",
+    "reasoning": "Matched skills: data analysis, docker, git, python, sql; Missing JD skills: fastapi, llm, machine learning, nlp, pandas, rag, scikit-learn; Detected experience: 4 years."
+  },
+  {
+    "filename": "diego_santos.txt",
+    "name": "Diego Santos",
+    "similarity_score": 5.2,
+    "skills_score": 33.3,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "overall_score": 34.0,
+    "matched_skills": [
+      "docker",
+      "fastapi",
+      "git",
+      "python"
+    ],
+    "missing_skills": [
+      "data analysis",
+      "llm",
+      "machine learning",
+      "nlp",
+      "pandas",
+      "rag",
+      "scikit-learn",
+      "sql"
+    ],
+    "years_experience": 5.0,
+    "education": "Bachelor's",
+    "reasoning": "Matched skills: docker, fastapi, git, python; Missing JD skills: data analysis, llm, machine learning, nlp, pandas, rag, scikit-learn, sql; Detected experience: 5 years."
+  },
+  {
+    "filename": "farhan_ali.txt",
+    "name": "Farhan Ali",
+    "similarity_score": 7.6,
+    "skills_score": 50.0,
+    "experience_score": 50.0,
+    "education_score": 100.0,
+    "overall_score": 33.4,
+    "matched_skills": [
+      "git",
+      "machine learning",
+      "pandas",
+      "python",
+      "scikit-learn",
+      "sql"
+    ],
+    "missing_skills": [
+      "data analysis",
+      "docker",
+      "fastapi",
+      "llm",
+      "nlp",
+      "rag"
+    ],
+    "years_experience": 1.0,
+    "education": "Master's",
+    "reasoning": "Matched skills: git, machine learning, pandas, python, scikit-learn, sql; Missing JD skills: data analysis, docker, fastapi, llm, nlp, rag; Detected experience: 1 year; below the JD's 2-year signal."
+  },
+  {
+    "filename": "grace_lee.txt",
+    "name": "Grace Lee",
+    "similarity_score": 4.1,
+    "skills_score": 8.3,
+    "experience_score": 100.0,
+    "education_score": 100.0,
+    "overall_score": 24.8,
+    "matched_skills": [
+      "sql"
+    ],
+    "missing_skills": [
+      "data analysis",
+      "docker",
+      "fastapi",
+      "git",
+      "llm",
+      "machine learning",
+      "nlp",
+      "pandas",
+      "python",
+      "rag",
+      "scikit-learn"
+    ],
+    "years_experience": 5.0,
+    "education": "Bachelor's",
+    "reasoning": "Matched skills: sql; Missing JD skills: data analysis, docker, fastapi, git, llm, machine learning, nlp, pandas, python, rag, scikit-learn; Detected experience: 5 years."
+  },
+  {
+    "filename": "jamal_williams.txt",
+    "name": "Jamal Williams",
+    "similarity_score": 3.8,
+    "skills_score": 16.7,
+    "experience_score": 100.0,
+    "education_score": 40.0,
+    "overall_score": 24.5,
+    "matched_skills": [
+      "git",
+      "python"
+    ],
+    "missing_skills": [
+      "data analysis",
+      "docker",
+      "fastapi",
+      "llm",
+      "machine learning",
+      "nlp",
+      "pandas",
+      "rag",
+      "scikit-learn",
+      "sql"
+    ],
+    "years_experience": 3.0,
+    "education": "Diploma/Associate",
+    "reasoning": "Matched skills: git, python; Missing JD skills: data analysis, docker, fastapi, llm, machine learning, nlp, pandas, rag, scikit-learn, sql; Detected experience: 3 years."
+  }
+]

@@ -1,0 +1,8 @@
+Charu Iyer
+Machine Learning Engineer
+
+Education
+Bachelor of Technology in Computer Science
+
+Experience
+2 years of experience with Python, machine learning, NLP, scikit-learn, pandas, SQL, Git, Docker, FastAPI, and Azure. Trained text classifiers and deployed model APIs for internal users.

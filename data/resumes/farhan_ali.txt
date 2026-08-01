@@ -1,0 +1,8 @@
+Farhan Ali
+Junior Data Scientist
+
+Education
+Master of Science in Data Science
+
+Experience
+1 year of experience in Python, machine learning, statistics, pandas, SQL, scikit-learn, Git, and data visualization. Completed projects on customer segmentation and predictive models.

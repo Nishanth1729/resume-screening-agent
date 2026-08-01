@@ -1,0 +1,8 @@
+Diego Santos
+Backend Engineer
+
+Education
+Bachelor of Science in Software Engineering
+
+Experience
+5 years of experience in Java, Python, PostgreSQL, Docker, Kubernetes, AWS, Git, and FastAPI. Built reliable backend services and automated deployment pipelines.

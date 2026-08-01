@@ -1,0 +1,8 @@
+Jamal Williams
+Frontend Developer
+
+Education
+Diploma in Web Development
+
+Experience
+3 years of experience with JavaScript, HTML, CSS, React, Git, and basic Python. Built accessible customer portals and collaborated with API teams.
