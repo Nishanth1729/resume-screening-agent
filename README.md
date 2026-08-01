@@ -31,7 +31,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-**2. Configure API keys**
+## 2. Configure API Keys
 None needed. This agent is fully deterministic (TF-IDF + regex-based extraction) and runs offline — see [Approach & model choice](#approach--model-choice) for why.
 
 **3. Run end to end**
@@ -96,6 +96,8 @@ python src/resume_agent.py --jd data/job_description.txt --resumes data/resumes 
 
 `--similarity hybrid` averages TF-IDF and embedding similarity. Semantic and hybrid output retain `tfidf_similarity_score`, making the baseline directly comparable. The default stays offline TF-IDF; semantic mode downloads the named Sentence Transformers model once when it is first used. Pass a role-specific JSON skill list with `--skills data/ai_research_skills.json` instead of relying on the global catalogue.
 
+This generates `semantic_ranking.json`, `semantic_ranking.csv`, and `semantic_ranking.audit.json`.
+
 ## Design trade-offs, limitations, and what we'd improve with more time
 
 - TF-IDF is inexpensive, explainable, and works offline, but it doesn't understand semantic equivalents as well as embeddings would (e.g. "led model deployment" vs. "MLOps").
@@ -106,11 +108,28 @@ python src/resume_agent.py --jd data/job_description.txt --resumes data/resumes 
 - Every run writes an audit log containing input SHA-256 fingerprints, scoring weights, the skills catalogue, and the selected method/model. This supports reproducibility and human review, but does not replace monitoring selection outcomes for disparate impact.
 - **With more time**, we'd add: OCR fallback for scanned PDFs; date-range experience parsing; and the optional LLM-narrative layer described above.
 
-## Project layout
+## Future Improvements
+
+- Dynamic skill extraction from the job description
+- Experience extraction from employment date ranges
+- OCR support for scanned PDFs
+- Section-aware resume parsing
+- Ranking evaluation with NDCG and Precision@K
+- Configurable weighting profiles for different job roles
+
+## Project Structure
 
 ```text
-src/resume_agent.py       CLI and scoring logic
-data/                      synthetic JD and resumes
-samples/                   reproducible expected outputs
-tests/                     regression tests (unittest)
-requirements-semantic.txt  optional Sentence Transformers mode
+data/
+  job_description.txt
+  resumes/
+outputs/                    created when you run the agent
+samples/                    checked-in example outputs
+src/
+  resume_agent.py
+tests/
+  test_agent.py
+requirements.txt
+requirements-semantic.txt
+README.md
+```
