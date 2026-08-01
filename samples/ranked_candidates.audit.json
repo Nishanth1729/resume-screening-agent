@@ -1,0 +1,84 @@
+{
+  "similarity_method": "tfidf",
+  "embedding_model": null,
+  "weights": {
+    "similarity": 0.45,
+    "skills": 0.35,
+    "experience": 0.15,
+    "education": 0.05
+  },
+  "skill_catalogue": [
+    "aws",
+    "azure",
+    "data analysis",
+    "data visualization",
+    "deep learning",
+    "docker",
+    "fastapi",
+    "flask",
+    "gcp",
+    "git",
+    "kubernetes",
+    "langchain",
+    "llm",
+    "machine learning",
+    "mysql",
+    "nlp",
+    "pandas",
+    "postgresql",
+    "python",
+    "pytorch",
+    "rag",
+    "scikit-learn",
+    "sql",
+    "statistics",
+    "tensorflow"
+  ],
+  "job_description": {
+    "filename": "job_description.txt",
+    "sha256": "bd0974761cdc0efc16dcc41669048dc9b5a2f9e2e1ddbe59d405179fb92c1304"
+  },
+  "resumes": [
+    {
+      "filename": "aisha_khan.txt",
+      "sha256": "4b3001a6ed0c05fe4be0908e9352007e1dbf07b853dc2b77736134488fb7a8d8"
+    },
+    {
+      "filename": "ben_carter.txt",
+      "sha256": "2b5253feaa3d17b58aa9e1475cb74c521a34baf13877f6e2260f713cf787a837"
+    },
+    {
+      "filename": "charu_iyer.txt",
+      "sha256": "f17218db426ae1b2796b3f8412cc5c57edd49f0e8c9b7794c1120f433552880b"
+    },
+    {
+      "filename": "diego_santos.txt",
+      "sha256": "548adfed9ecd11bb07be8a464b18ee99ee81a304b4a8b1458f11203341630cec"
+    },
+    {
+      "filename": "elena_petrov.txt",
+      "sha256": "3acb56a43243c9efa66f0d043a5b8dafc03e1fd04e806c623cc50f5120a9e00f"
+    },
+    {
+      "filename": "farhan_ali.txt",
+      "sha256": "7bc8a2e29c3b4084e99a41a647f754f87e4f4f0f8e66bec6dcbd78f9c970ac56"
+    },
+    {
+      "filename": "grace_lee.txt",
+      "sha256": "e241b0b206147cf04c774123d18e92753b82d820dc39fbc1a409a0ed912b73ad"
+    },
+    {
+      "filename": "harish_nair.txt",
+      "sha256": "3509df5211b32fdcce7fcee0bb834ac9a4d64c87d6c8c7496df4939fe83eb776"
+    },
+    {
+      "filename": "isabella_rossi.txt",
+      "sha256": "cc311494763c905b7fc366be3470f78a790cd791fcba250e270afdf7d127f39a"
+    },
+    {
+      "filename": "jamal_williams.txt",
+      "sha256": "8d03f7ae833e618af9d7132a88b40dd005749220e820b5db73b701f99852f774"
+    }
+  ],
+  "human_review_required": true
+}

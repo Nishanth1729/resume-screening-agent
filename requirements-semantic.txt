@@ -1,0 +1,2 @@
+# Optional: only needed for --similarity semantic or --similarity hybrid.
+sentence-transformers>=3.0,<4.0

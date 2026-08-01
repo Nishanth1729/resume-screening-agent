@@ -8,7 +8,7 @@ A runnable, transparent NLP agent that ranks a batch of resumes against a job de
 
 `Job description + resume folder → ordered JSON/CSV shortlist with scores and reasons.`
 
-The agent reads documents, extracts a bounded skills catalogue, detects experience and education signals, calculates TF-IDF cosine similarity against the JD, and writes ranked results. The included TXT demo uses only the Python standard library; the two listed dependencies only enable DOCX and PDF input.
+The agent reads documents, extracts a configurable skills catalogue, detects experience and education signals, calculates TF-IDF or optional embedding cosine similarity against the JD, and writes ranked results plus an audit log. The included TXT demo uses only the Python standard library; the two listed dependencies only enable DOCX and PDF input.
 
 ## Setup instructions
 
@@ -29,7 +29,7 @@ None needed. This agent is fully deterministic (TF-IDF + regex-based extraction)
 ```bash
 python src/resume_agent.py --jd data/job_description.txt --resumes data/resumes --output outputs/ranked_candidates
 ```
-This produces `outputs/ranked_candidates.json` and `.csv`, plus a ranked shortlist printed to the console.
+This produces `outputs/ranked_candidates.json`, `.csv`, and `.audit.json`, plus a ranked shortlist printed to the console.
 
 **4. Run the regression tests**
 ```bash
@@ -53,9 +53,9 @@ Top 3 of 10 ranked candidates from the included demo run (full results in `sampl
 
 | Rank | Name | Overall | Matched skills | Reasoning (excerpt) |
 |---|---|---:|---|---|
-| 1 | Aisha Khan | 58.5 | 10/11 JD skills | 3 yrs experience, Master's, RAG/FastAPI/Docker matched |
-| 2 | Charu Iyer | 54.7 | 9/11 JD skills | 2 yrs experience, Bachelor's, missing RAG + data analysis |
-| 3 | Elena Petrov | 54.7 | 10/11 JD skills | 6 yrs experience, PhD, missing FastAPI only |
+| 1 | Aisha Khan | 58.8 | 11/12 JD skills | 3 yrs experience, Master's, LLM/RAG/FastAPI/Docker matched |
+| 2 | Elena Petrov | 54.9 | 11/12 JD skills | 6 yrs experience, PhD, missing FastAPI only |
+| 3 | Charu Iyer | 52.3 | 9/12 JD skills | 2 yrs experience, Bachelor's, missing LLM/RAG + data analysis |
 
 ## Scoring method
 
@@ -63,7 +63,7 @@ The final score is a weighted, auditable blend:
 
 | Component | Weight | Calculation |
 |---|---:|---|
-| NLP relevance | 45% | TF-IDF cosine similarity over unigrams and bigrams |
+| NLP relevance | 45% | TF-IDF by default; optional semantic embedding or hybrid similarity |
 | Required skills | 35% | Share of JD catalogue skills found in the resume |
 | Experience | 15% | Detected years, capped at the JD requirement |
 | Education | 5% | Degree signal detected in the resume |
@@ -76,6 +76,17 @@ We deliberately **do not use an LLM to calculate scores**. Deterministic NLP (TF
 
 This trades off the semantic flexibility an LLM or embedding model would offer (e.g. recognizing "led a team of 5 engineers" as a seniority signal without the word "years") for full transparency. An LLM could be layered on top later purely to rewrite the `reasoning` field in more natural language, without ever being allowed to change the underlying score — keeping the ranking itself auditable while improving the write-up.
 
+### Optional semantic embeddings
+
+For semantic comparison, install the optional local dependency (no API key is needed):
+
+```bash
+pip install -r requirements-semantic.txt
+python src/resume_agent.py --jd data/job_description.txt --resumes data/resumes --output outputs/semantic_ranking --similarity semantic
+```
+
+`--similarity hybrid` averages TF-IDF and embedding similarity. Semantic and hybrid output retain `tfidf_similarity_score`, making the baseline directly comparable. The default stays offline TF-IDF; semantic mode downloads the named Sentence Transformers model once when it is first used. Pass a role-specific JSON skill list with `--skills data/ai_research_skills.json` instead of relying on the global catalogue.
+
 ## Design trade-offs, limitations, and what we'd improve with more time
 
 - TF-IDF is inexpensive, explainable, and works offline, but it doesn't understand semantic equivalents as well as embeddings would (e.g. "led model deployment" vs. "MLOps").
@@ -83,7 +94,8 @@ This trades off the semantic flexibility an LLM or embedding model would offer (
 - Experience and education use conservative regex signals (`year`/`years`/`yr`/`yrs`) and can still miss unusual résumé formatting or non-English degree titles.
 - PDF extraction depends on the PDF having a text layer; scanned PDFs would need OCR (e.g. Tesseract) — not implemented here.
 - This is a decision-support tool, not an automated hiring decision-maker. A human should review the evidence, apply consistent policy, and audit for bias before acting on any ranking.
-- **With more time**, we'd add: an embeddings-based similarity option as a second, comparable score alongside TF-IDF; OCR fallback for scanned PDFs; and the optional LLM-narrative layer described above.
+- Every run writes an audit log containing input SHA-256 fingerprints, scoring weights, the skills catalogue, and the selected method/model. This supports reproducibility and human review, but does not replace monitoring selection outcomes for disparate impact.
+- **With more time**, we'd add: OCR fallback for scanned PDFs; date-range experience parsing; and the optional LLM-narrative layer described above.
 
 ## Project layout
 
@@ -92,3 +104,4 @@ src/resume_agent.py       CLI and scoring logic
 data/                      synthetic JD and resumes
 samples/                   reproducible expected outputs
 tests/                     regression tests (unittest)
+requirements-semantic.txt  optional Sentence Transformers mode
