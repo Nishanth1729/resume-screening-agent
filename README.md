@@ -4,6 +4,15 @@
 
 A runnable, transparent NLP agent that ranks a batch of resumes against a job description. Built for reviewer reproducibility: the included 10 synthetic resumes and job description run locally, end to end, with **no API key**.
 
+## Features
+
+- Parses PDF, DOCX, and TXT resumes
+- Extracts skills, experience, and education
+- Computes hybrid relevance scores using TF-IDF and optional semantic similarity
+- Generates explainable rankings with detailed reasoning
+- Exports ranked results to CSV and JSON
+- Processes batches of resumes in a single run
+
 ## What it does
 
 `Job description + resume folder → ordered JSON/CSV shortlist with scores and reasons.`
